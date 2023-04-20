@@ -33,6 +33,22 @@
         </div>
 
     </form>
+
+    <form action="#" method="#">
+        <div>
+            <span id="msg" class="success"></span>
+        </div>
+        <div>
+            <input type="email" placeholder="Email" id="useremail">
+        </div>
+        <div>
+            <input type="text" placeholder="Password" id="userpass">
+        </div>
+        <div>
+            <button id="login">Login</button>
+        </div>
+
+    </form>
     
 </body>
 </html>
@@ -63,8 +79,10 @@
     form input {
 
         height: 20px;
-        padding: 5px;
+        padding: 8px;
         width: 30%;
+        border-radius: 8px;
+        border: 1px solid grey;
 
     }
 
@@ -76,6 +94,7 @@
         border-radius: 8px;
         height: 35px;
         width: 31%;
+        color: white;
 
     }
     #promptData {
@@ -87,6 +106,31 @@
         height: 35px;
         width: 31%;
         color: white;
+
+    }
+    #login {
+
+        background-color: rgb(4, 142, 206);
+        font-size: 15px;
+        border: none;
+        border-radius: 8px;
+        height: 35px;
+        width: 31%;
+        color: white;
+
+    }
+
+    .success {
+
+        color: rgb(14, 146, 14);
+        font-size: 14px;
+
+    }
+
+    .error {
+
+        color: #eb4646;
+        font-size: 14px;
 
     }
 
