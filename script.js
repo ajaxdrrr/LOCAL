@@ -1,12 +1,13 @@
 //local storage to store credentials
 
-let name = document.querySelector('#name');
+let namez = document.querySelector('#name');
 let phone = document.querySelector('#phone');
 let email = document.querySelector('#email');
 let password = document.querySelector('#pass');
 
 let regBtn = document.querySelector('#regBtn');
 
+let taskEntries = JSON.parse(localStorage.getItem("taskEntries"));
 
 regBtn.addEventListener("click", e => {
 
@@ -18,13 +19,21 @@ regBtn.addEventListener("click", e => {
 
 function getInputs() {
 
-    let informations = {
-        task: taskInput.value,
-        date: dateInput.value,
-        id: taskEntries.length + 1
+    if (taskEntries == null) {
+        taskEntries = [];
     }
 
-    taskEntries.push(taskItem);
+    let informations = {
+
+        name: namez.value,
+        date: phone.value,
+        phone: phone.value,
+        email: email.value,
+        password: password.value
+
+    }
+
+    taskEntries.push(informations);
 
     localStorage.setItem("taskEntries", JSON.stringify(taskEntries));
 
